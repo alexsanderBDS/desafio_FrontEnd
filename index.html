@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>SunGreen | Application</title>
+
+        <link rel="stylesheet" href="./styles/index.css">
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="flex-header">
+                <h3><a id = "myname" style="position: absolute; color: antiquewhite;" href="">Created by Alexsander B. Santos</a></h3>
+                <div><a href="index.html">EXTRA</a></div>
+                <div><a href="index.html">ABOUT</a></div>
+                <div><a href="index.html">HOME</a></div>
+            </div>
+            <div class="flex-body">
+                <div><div class="animation-class"><h1><span>SUNGREEN</span> get the new Application</h1></div></div>
+                <div class="item-2">
+                    <div class="item-2_1"><img src="img/sun-green.gif"><p>Get Started</p></div>
+                    <div  class="item-2_2"><img src="img/sun-green.gif"><p>Documentation</p></div>
+                    <div  class="item-2_3"><img src="img/sun-green.gif"><p>Meet our Team</p></div>
+                    <div  class="item-2_3"><img src="img/sun-green.gif"><img class="trick" src="img/unlock-image.gif"><p id="trick">Unlock</p></div>
+                </div>
+                <div class="item-3">
+                    <h2>Additional information</h2>
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, autem nesciunt corporis voluptatem sit eius temporibus omnis sint dolorem excepturi natus odit debitis quidem possimus impedit delectus facilis officiis. Voluptatum!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo iusto accusamus quibusdam inventore ea id minima sed natus consequatur officia. Enim similique a consequuntur sunt ratione. Dolore, nemo! Omnis, ipsa.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nisi magni maxime nostrum et, repudiandae, ut laudantium consectetur itaque alias in est quasi? A officiis excepturi delectus tempora cumque ipsa!</p>
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, autem nesciunt corporis voluptatem sit eius temporibus omnis sint dolorem excepturi natus odit debitis quidem possimus impedit delectus facilis officiis. Voluptatum!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo iusto accusamus quibusdam inventore ea id minima sed natus consequatur officia. Enim similique a consequuntur sunt ratione. Dolore, nemo! Omnis, ipsa.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nisi magni maxime nostrum et, repudiandae, ut laudantium consectetur itaque alias in est quasi? A officiis excepturi delectus tempora cumque ipsa!</p>
+                    <p> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, autem nesciunt corporis voluptatem sit eius temporibus omnis sint dolorem excepturi natus odit debitis quidem possimus impedit delectus facilis officiis. Voluptatum!</p>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo iusto accusamus quibusdam inventore ea id minima sed natus consequatur officia. Enim similique a consequuntur sunt ratione. Dolore, nemo! Omnis, ipsa.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius nisi magni maxime nostrum et, repudiandae, ut laudantium consectetur itaque alias in est quasi? A officiis excepturi delectus tempora cumque ipsa!</p>
+                </div>
+            </div>
+        </div>
+        <script>
+
+            const el = document.querySelectorAll('a');
+
+            const myText = `Gostaria de agradecer a oportunidade de participar do processo seletivo.
+            Foi um grande desafio e consegui colocar em prática muitas das coisas que aprendi.
+            Curti muito criar esse layout! Mais uma vez, muito obrigado!`
+
+            el.forEach((el2) => {
+                el2.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    if(el2.id) return alert(myText)
+                    alert(`You clicked on ${el2.textContent}`)
+                })
+            });
+
+            const trick = document.querySelector('#trick');
+
+            trick.addEventListener('click', () => {
+                document.querySelector('.trick').style = "display: block;"
+                setTimeout(() => document.querySelector('.trick').style = "display: none;", 4000)
+            });
+
+        </script>
+    </body>
+
+</html>
